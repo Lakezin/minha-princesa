@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Declaração pro amor da minha vida</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <script>
+        // Verifica se o usuário fez login
+        if (!sessionStorage.getItem("logado")) {
+            window.location.href = "login.html"; // Se não estiver logado, volta para o login
+        }
+    </script>
+    
+    <header>
+        <h1>Para a minha princesinha 👇👇 ó ó </h1>
+        <img src="img/foto da minha princesa.jpg" alt="Uma imagem especial" class="header-img">
+        <p class="header-text">Você vai falar que nãokkk, mas vc tá tão linda nessa foto meu bem 🥺🥺</p>
+    </header>
+
+    <section class="message">
+        <h2>Palavras nunca vão ser o sulficiente...</h2>
+        <p id="typing-text"></p>
+    </section>
+
+    <section class="gallery">
+        <h2>Nossas cartinhas</h2>
+        <div class="photo-grid" id="photo-gallery">
+            <!-- As imagens serão carregadas dinamicamente -->
+        </div>
+    </section>
+
+    <section class="playlist">
+        <h2>Nossa Playlist</h2>
+        <iframe style="border-radius:10px" 
+        src="https://open.spotify.com/embed/playlist/1I6EuSs30L6LDpEfWNbn1g?si=e0d84fa3a105407a?utm_source=generator&theme=0" 
+        width="100%" 
+        height="380" 
+        frameborder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+     </iframe>
+    </section>
+
+    <section class="love-message">
+        <h2>Minhas palavras pra ti minha rainha</h2>
+        <p id="random-message">Clique no botão para receber uma mensagem fofa</p>
+        <button onclick="generateMessage()">Gerar Mensagem</button>
+    </section>
+
+   </section>
+   <section class="audio-section">
+    <h2>Minha Mensagem de Voz</h2>
+    <audio controls>
+        <source src="audio/pra minha princesa.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+</section>
+
+
+    <footer>
+        <p>Espero de coração que você tenha gostado, minha princesinha.</p>
+    </footer>
+
+    <script>
+        // Efeito de digitação
+        const text = "Eu queria encontrar as palavras perfeitas, mas gestos falam melhor do que qualquer frase. Cada momento ao seu lado é único e eu não quero sair dele, espero poder continuar te fazendo sorrir até o fim.";
+        let i = 0;
+        function typeEffect() {
+            if (i < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+        window.onload = typeEffect;
+
+        // Mensagens aleatórias
+        function generateMessage() {
+            const messages = [
+                "Obrigado por deixar meus dias tão leve minha princesinha.",
+                "eu quero continuar contigo pra sempre, e essas não são palavras vazias.",
+                "Eu quero contiunar me apaixonando pelo seu sorriso.",
+                "Manda foto da raba🔥🔥 rs.",
+                "Manda foto da raba🔥🔥 rs."
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("random-message").innerText = messages[randomIndex];
+        }
+
+        // Galeria de fotos dinâmica
+        const images = [
+            "img/Screenshot_1.png",
+            "img/Screenshot_2.png",
+            "img/Screenshot_3.png",
+            "img/Screenshot_4.png",
+            "img/Screenshot_5.png",
+            "img/Screenshot_6.png",
+            "img/Screenshot_7.png",
+            "img/Screenshot_8.png",
+            "img/Screenshot_9.png",
+            "img/Screenshot_10.png",
+            "img/Screenshot_11.png",
+            "img/Screenshot_12.png",
+            "img/Screenshot_13.png",
+            "img/Screenshot_14.jpg"
+        ];
+        const gallery = document.getElementById("photo-gallery");
+        images.forEach(src => {
+            let img = document.createElement("img");
+            img.src = src;
+            img.className = "photo";
+            gallery.appendChild(img);
+        });
+    </script>
+</body>
+</html>

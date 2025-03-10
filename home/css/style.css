@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #2c2b29;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #f5deb3;
+    color: #070704;
+    text-align: center;
+    padding: 1.5em;
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(245, 222, 179, 0.3);
+    max-width: 800px;
+    width: 90%;
+}
+
+.message {
+    background-color: #ffffff;
+}
+
+.gallery {
+    background-color: #ffffff;
+}
+
+.photo-grid {
+    display: flex; /* Deixa as imagens lado a lado */
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha se necessário */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+.photo-grid img {
+    width: 800px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.photo {
+    background-color: #f5deb3;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.love-message {
+    text-align: center;
+}
+
+button {
+    background-color: #f5deb3;
+    color: #1b1b19;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e0c385;
+}
+
+footer {
+    background-color: #f5deb3;
+    color: #000000;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+.header-img {
+    display: block;  /* Garante que fique abaixo do título */
+    margin: 10px auto; /* Centraliza horizontalmente */
+    max-width: 80%;  /* Garante que a imagem não ultrapasse a tela */
+    height: auto;  /* Mantém a proporção da imagem */
+    border-radius: 20px; /* Borda arredondada opcional */
+    box-shadow: 0 18px 18px rgba(0.200, 0.200, 0.200, 0.479); /* Sombrinha leve para destaque */
+}
+
+.audio-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px; /* Ajuste o tamanho do player */
+    margin-top: 20px;
+}
